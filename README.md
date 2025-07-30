@@ -7,11 +7,17 @@ This project implements a **Federated Learning (FL)** system for **Intrusion Det
 ## 📁 Project Structure
 
 FL-IDS - non-iid - Full Metrics/
+
 ├── dataset/ # Directory containing UNSW-NB15 CSVs
+
 ├── client.py # Flower client logic (training, validation, local metrics)
+
 ├── data.py # Data preprocessing and Dirichlet skewed partitioning
+
 ├── model.py # Neural network model and FL utility functions
+
 ├── server.py # Flower server with full evaluation metrics + plots
+
 ├── run_fl_ids.bat # Script to launch server and multiple clients
 
 
@@ -57,12 +63,6 @@ Using **non-IID data with α = 0.1**, the system achieved:
 ```bash
 pip install flwr torch scikit-learn pandas matplotlib opacus
 Optional: opacus for privacy support (commented in code)
-
-2. Prepare Dataset
-Place all UNSW-NB15 CSVs under:
-
-dataset/10%/
-(You may rename or modify DATA_DIR in data.py as needed.)
 
 3. Run the System
 Use the provided .bat file (Windows) or adapt the commands manually:
